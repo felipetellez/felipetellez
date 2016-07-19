@@ -55,7 +55,7 @@ def crear_maquina():
 	vname = maquina['tittle']
 	memoria = maquina['memoria']
 	nucleos = maquina['nucleos']	
-	output = subprocess.check_output(['./maquina.sh', vname, memoria, nucleos ])
+	output = subprocess.check_output(['./creamaquina.sh', vname, memoria, nucleos ])
 	
 	return output
 
