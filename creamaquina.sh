@@ -1,3 +1,5 @@
+##!/bin/bash
+
 #Creacion del disco virtual dinamico para la maquina
 VBoxManage createhd --filename $1.vdi --size 10000
 
@@ -13,21 +15,17 @@ VBoxManage storageattach $1 --storagectl "SATA Controller" --port 0 --device 0 -
 #crea un controlador  para dispositivos de almacenamiento
 VBoxManage storagectl $1 --name "IDE Controller" --add ide
 
-#se vincula el iso al controlador
-#VBoxManage storageattach $VM --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium /tmp/ubuntu-server32.iso
-
-
 # Habilida I/O APIC si esta disponible
 VBoxManage modifyvm $1 --ioapic on
 
-# Establece el orden de booteo
-VBoxManage modifyvm $1 --boot1 dvd --boot2 disk --boot3 none --boot4 none
-
 #Asigna el tamaño de memoria ram
-VBoxManage modifyvm $1 --memory $2 -vram 128
+VBoxManage modifyvm $1 --memory $2 
 
 #Asigna un numero de nucleos para CPUs de la maquina virtual
 VBoxManage modifyvm $1 --cpus $3
+
+# Establece el orden de booteo
+VBoxManage modifyvm $1 --boot1 dvd --boot2 disk --boot3 none --boot4 none
 
 #configura la tarjeta de red de la memoria virtual
 VBoxManage modifyvm $1 --nic1 bridged --bridgeadapter1 e1000g0
