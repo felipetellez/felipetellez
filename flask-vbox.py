@@ -1,4 +1,9 @@
 #!/usr/bin/python
+#INTEGRANTES:
+#JUAN DANIEL GALARZA COD: 1323966
+#JUAN FELIPE TELLEZ COD: 1331425
+#CRISTIAN CAMILO JURADO COD: 1324366
+
 # -*- coding: iso-8859-15 -*-
 # Librerias requeridas para correr aplicaciones basadas en Flask
 from flask import Flask, jsonify, make_response, request, abort
