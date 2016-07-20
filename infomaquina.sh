@@ -1,4 +1,8 @@
 #!/bin/bash
+#INTEGRANTES:
+#JUAN DANIEL GALARZA COD: 1323966
+#JUAN FELIPE TELLEZ COD: 1331425
+#CRISTIAN CAMILO JURADO COD: 1324366
 
 #nucleos
 VBoxManage showvminfo $1 | grep "Number of" | tr -s ' ' | cut -d' ' -f4
