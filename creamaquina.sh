@@ -1,4 +1,9 @@
-##!/bin/bash
+#!/bin/bash
+
+#INTEGRANTES:
+#JUAN DANIEL GALARZA COD: 1323966
+#JUAN FELIPE TELLEZ COD: 1331425
+#CRISTIAN CAMILO JURADO COD: 1324366
 
 #Creacion del disco virtual dinamico para la maquina
 VBoxManage createhd --filename $1.vdi --size 10000
